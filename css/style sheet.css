@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    
+    background-color: #DBDEDF;
+    
+}
+
+h1{
+    color: #D10000;
+    font-family: 'K2D', sans-serif;
+    text-align: center;
+    
+}
+
+h2{
+    
+    colour: #d10000;
+    font-family: 'K2D', sans-serif;
+    align-content: center;
+    
+}
+
+
+p{
+    
+    color: 000;
+    font-display: "Nunito", sans-serif;
+    text-align: center;
+    
+}
+
+.navbar-default {
+  background-color: #34373F;
+  color: #D10000;
+  background-image: none;
+  background-repeat: no-repeat;
+  border: 0;
+    
+ }
+
+.navbar-default .navbar-nav > li > a {
+    color: #D10000;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
+        a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #34373F; 
+    background-color: #D10000;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #DBDEDF; /*Sets the text hover color on navbar*/
+}
+
+.btn-primary{
+    
+    background-color: #D10000;
+    border: 0;
+    
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #950000;
+    border: 0;
