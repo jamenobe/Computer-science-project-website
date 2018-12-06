@@ -3,11 +3,12 @@
 body {
     
     background-color: #DBDEDF;
+
     
 }
 
 h1{
-    color: #D10000;
+    color: #d10000;
     font-family: 'K2D', sans-serif;
     text-align: center;
     
@@ -15,7 +16,7 @@ h1{
 
 h2{
     
-    colour: #d10000;
+    color: #d10000;
     font-family: 'K2D', sans-serif;
     align-content: center;
     
@@ -24,8 +25,8 @@ h2{
 
 p{
     
-    color: 000;
-    font-display: "Nunito", sans-serif;
+    color: #000;
+    font-family: "Nunito", sans-serif;
     text-align: center;
     
 }
@@ -64,3 +65,22 @@ p{
     color: #fff;
     background-color: #950000;
     border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 75%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+#table_div{
+
+    overflow-y: scroll;
+    max-height: 500px;
+    position: absolute;
+}
