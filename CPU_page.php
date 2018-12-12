@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
-
+    <!-- links to google fonts, bootstrap and the style sheet -->
     <meta charset="utf-8">
 
     <title>CPU 2</title>
@@ -54,7 +54,7 @@
         <div class="col-sm-1"></div>
 
         <div id="table_div" class="col-sm-4" align="center">
-            <table>
+            <table> <!-- creates the table for the name and value of the processors -->
                 <tr>
 
                     <th>CPU name</th>
@@ -76,7 +76,8 @@
                     }
 
                 }
-                ?>
+                ?> <!-- the php code that links the database to the page, fetches
+                 the values on the database table and displays them on the website-->
 
             </table>
         </div>

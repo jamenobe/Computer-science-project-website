@@ -3,21 +3,17 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style sheet.css" type="text/css"/>
-
+<!-- links to google fonts, bootstrap and the style sheet -->
 <body>
-<?php
 
-
-
-?>
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top"> <!-- creates the start of the Nav bar and how it will act on the page -->
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="index.php">PC Builder</a>
         </div>
 
         <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Start</a></li>
+            <li class="active"><a href="index.php">Start</a></li> <!--all the links to the different pages on the site -->
             <li><a href="CPU_page.php">CPU</a></li>
             <li><a href="#">Motherboard</a></li>
             <li><a href="#">Case</a></li>
@@ -46,35 +42,6 @@
 
             <p>
                 Lorem ipsum dolor sit amet, penatibus sit blandit. Vel sed amet class nec qui, ac nec, eleifend nam, dictum vulputate duis sit id est, elit ultricies sit turpis ac scelerisque. Sapien molestie porta suspendisse ante, vestibulum litora, lacinia et et tempus, dignissim vel cras dolor risus rutrum fusce. Dignissim et ultrices molestie sit sollicitudin mollis. Id rhoncus convallis dui et commodo, non dolor dolor vestibulum magna tellus aliquam, magna a sit enim nam, tellus tristique tempor vivamus mi vitae, pede ut imperdiet. Nec mauris odio dignissim ut sociis mauris. Malesuada massa libero morbi porta, non lectus pharetra tristique fermentum vestibulum quis, sit sed augue quam vel amet lacus, non sapien sem erat felis, in eu ac at ut elit. Accumsan feugiat quam vestibulum tristique tristique condimentum, ornare nam enim. Imperdiet dui netus turpis turpis, augue felis et purus turpis, praesent blandit proin integer praesent tincidunt.
-
-            <div style="overflow-y:auto;">
-                <table>
-                    <tr>
-                        <th>CPU name</th>
-                        <th>Manufacturer</th>
-                        <th>Cost</th>
-
-                    </tr>
-                    <tr>
-                        <td>Jill</td>
-                        <td>Smith</td>
-                        <td>50</td>
-
-                    </tr>
-                    <tr>
-                        <td>Eve</td>
-                        <td>Jackson</td>
-                        <td>94</td>
-
-                    </tr>
-                    <tr>
-                        <td>Adam</td>
-                        <td>Johnson</td>
-                        <td>67</td>
-
-                    </tr>
-                </table>
-            </div>
             </p>
 
         </div>
@@ -86,7 +53,7 @@
         <div class="col-sm-2" style=""></div>
         <div class="col-sm-8" style="" align="center">
 
-            <a class="btn btn-primary" href="CPU page.html" role="button">Start</a>
+            <a class="btn btn-primary" href="CPU_page.php" role="button">Start</a>
 
         </div>
 
