@@ -9,10 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/Untitled-1.ico" type="image/x-icon">
     <!-- links to google fonts, bootstrap and the style sheet -->
     <meta charset="utf-8">
 
-    <title>CPU 2</title>
+    <title>CPU</title>
 
 </head>
 <body>
@@ -35,6 +37,7 @@
             <li><a href="#">Ram</a></li>
             <li><a href="#">GPU</a></li>
             <li><a href="#">PSU</a></li>
+            <li><a href="Login_Page.php">Login</a></li>
         </ul>
 
     </div>
@@ -62,20 +65,24 @@
 
                 </tr>
                 <?php
-                $conn = mysqli_connect("192.168.43.207", "root", "password", "project");
-                if ($conn-> connect_error){
+                function fetch_cpu_data()
+                {
+                    $conn = mysqli_connect("192.168.43.207", "root", "password", "project");
+                    if ($conn->connect_error) {
 
-                    die("connection Failed:". $conn-> connection_error);
+                        die("connection Failed:" . $conn->connection_error);
 
-                }
-                $sql = "SELECT Name, Price from cpu_table";
-                $result = $conn-> query($sql);
-                if($result-> num_rows > 0){
-                    while ($row = $result-> fetch_assoc()){
-                        echo "<tr><td><a>" .$row["Name"] ."</a></td><td>" .$row["Price"] ."</td></tr>";
                     }
+                    $sql = "SELECT Name, Price from cpu_table";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr><td><a>" . $row["Name"] . "</a></td><td>" . $row["Price"] . "</td></tr>";
+                        }
 
+                    }
                 }
+                fetch_cpu_data;
                 ?> <!-- the php code that links the database to the page, fetches
                  the values on the database table and displays them on the website-->
 

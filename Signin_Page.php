@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style sheet.css" type="text/css"/>
+    <link rel="shortcut icon" href="images/Untitled-1.ico" type="image/x-icon">
 </head>
 <Body>
 <nav class="navbar navbar-default navbar-static-top">
@@ -16,13 +17,14 @@
         </div>
 
         <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Start</a></li>
+            <li><a href="index.php">Start</a></li>
             <li><a href="CPU_page.php">CPU</a></li>
             <li><a href="#">Motherboard</a></li>
             <li><a href="#">Case</a></li>
             <li><a href="#">RAM</a></li>
             <li><a href="#">GPU</a></li>
             <li><a href="#">PSU</a></li>
+            <li class="active"><a href="Signin_Page.php">Sign up</a></li>
         </ul>
     </div>
 </nav>

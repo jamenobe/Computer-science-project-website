@@ -21,7 +21,7 @@ function Signup()
     else
     {
 
-        echo "ERrRRRRoorrr";
+        echo "The password or username was invalid"; /*says to the user that their username or password was invalid*/
 
     }
 
