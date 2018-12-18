@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <a class="btn btn-primary" href="index.php" role="button">Back</a>
 <?php
 

@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <a class="btn btn-primary" href="index.php" role="button">Back</a>
 <?php /*starts the PHP*/
 
@@ -10,7 +11,8 @@ function Login()
     $password = $_POST["Password"];/*creates a variable called password containing the input of password from the user*/
 
     $query = "SELECT * FROM user WHERE Username = '$username'";
-    /*creates a variable called query which uses SQL to select all entries in the column username on the Database*/
+    /*creates a variable called query which uses SQL to select the entry that matches the user inputted
+    username on the Database*/
     $result = mysqli_query($conn, $query);
     /*creates a variable called result which is the result of the query above*/
 
@@ -27,6 +29,7 @@ function Login()
         {
 
             echo "Valid account";
+            $_SESSION["username"] = $username;
 
         }
         else

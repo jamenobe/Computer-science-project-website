@@ -16,7 +16,7 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="index.php">Start</a></li> <!--all the links to the different pages on the site -->
             <li><a href="CPU_page.php">CPU</a></li>
-            <li><a href="#">Motherboard</a></li>
+            <li><a href="Motherboard_page.php">Motherboard</a></li>
             <li><a href="#">Case</a></li>
             <li><a href="#">RAM</a></li>
             <li><a href="#">GPU</a></li>

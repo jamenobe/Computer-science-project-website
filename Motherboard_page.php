@@ -15,7 +15,7 @@
     <!-- links to google fonts, bootstrap and the style sheet -->
     <meta charset="utf-8">
 
-    <title>CPU</title>
+    <title>Motherboard</title>
 
 </head>
 <body>
@@ -32,8 +32,8 @@
         <ul class="nav navbar-nav">
 
             <li><a href="index.php">Start</a></li>
-            <li class="active"><a href="CPU page.php">CPU</a></li>
-            <li><a href="Motherboard_page.php">Motherboard</a></li>
+            <li><a href="CPU_page.php">CPU</a></li>
+            <li class="active"><a href="Motherboard_page.php">Motherboard</a></li>
             <li><a href="#">Case</a></li>
             <li><a href="#">Ram</a></li>
             <li><a href="#">GPU</a></li>
@@ -66,7 +66,7 @@
 
                 </tr>
                 <?php
-                function fetch_cpu_data()
+                function fetch_motherboard_data()
                 {
                     $conn = mysqli_connect("192.168.43.207", "root", "password", "project");
                     if ($conn->connect_error) {
@@ -74,7 +74,7 @@
                         die("connection Failed:" . $conn->connection_error);
 
                     }
-                    $sql = "SELECT Name, Price from cpu_table";
+                    $sql = "SELECT Name, Price from motherboard_table";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -83,7 +83,7 @@
 
                     }
                 }
-                fetch_cpu_data();
+                fetch_motherboard_data();
                 ?> <!-- the php code that links the database to the page, fetches
                  the values on the database table and displays them on the website-->
 
