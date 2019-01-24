@@ -36,7 +36,7 @@ function Login()
         {
 
             echo "Invalid account";
-            <a href="Signin_Page.php">Dont have an account? Sign up here</a>
+            echo "<a href='Signin_Page.php'>Dont have an account? Sign up here</a>";
         }
 
     }

@@ -49,7 +49,7 @@
 
     <div class="row" align="center">
 
-        <h2>Choose which CPU you want</h2>
+        <h2>Choose which Motherboard you want</h2>
 
     </div>
 
@@ -71,7 +71,7 @@
                     $conn = mysqli_connect("192.168.43.207", "root", "password", "project");
                     if ($conn->connect_error) {
 
-                        die("connection Failed:" . $conn->connection_error);
+                        die("connection Failed:" . $conn->connect_error);
 
                     }
                     $sql = "SELECT Name, Price from motherboard_table";

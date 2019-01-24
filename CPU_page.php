@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<!--<?php session_start() ?>-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,14 +71,16 @@
                     $conn = mysqli_connect("192.168.43.207", "root", "password", "project");
                     if ($conn->connect_error) {
 
-                        die("connection Failed:" . $conn->connection_error);
+                        die("connection Failed:" . $conn->connect_error);
 
                     }
                     $sql = "SELECT Name, Price from cpu_table";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo "<tr><td><a>" . $row["Name"] . "</a></td><td>" . $row["Price"] . "</td></tr>";
+                            echo "<tr><td><a href = 'javascript:document.cookie("id= . $row["id"] . ")'>" . $row["Name"]" . "</a></td><td>" . $row["Price"] . "</td></tr>";
+                            /*outputs the query results onto the table*/
+                        <a href ="javascript:document.cookie(<?php $row[ID]?>)>
                         }
 
                     }
