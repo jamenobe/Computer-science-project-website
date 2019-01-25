@@ -66,30 +66,33 @@
 
                 </tr>
                 <?php
-                /*function fetch_cpu_data()
+                function fetch_cpu_data()
                 {
-                    $conn = mysqli_connect("192.168.43.207", "root", "password", "project");
+                    $conn = mysqli_connect("192.168.0.24", "root", "password", "project");
                     if ($conn->connect_error) {
 
                         die("connection Failed:" . $conn->connect_error);
 
                     }
-                    $sql = "SELECT Name, Price from cpu_table";
+                    $sql = "SELECT * from cpu_table";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
 
+                                echo "<tr>";
+                                echo "<td><a onclick='SetCPU(`" . $row["ID"] . "`)'>" . $row["Vendor"] . " " . $row["Name"] .  "</a></td>";
+                                echo "<td>" . $row["Price"] . "</td>";
+                                echo "</tr>";
                             // This is where you output everything
 
                         }
 
                     }
                 }
-                fetch_cpu_data();*/
-
+                fetch_cpu_data();
 
                 // Mocking up the database
-                $result = [
+                /*$result = [
 
                         [
 
@@ -112,17 +115,17 @@
 
                         ]
 
-                ];
+                ];*/
 
                 // Would use fetch_assoc() function if result from database
-                foreach ($result as $row) {
+                /*foreach ($result as $row) {
 
                     echo "<tr>";
                     echo "<td><a onclick='SetCPU(`" . $row["ID"] . "`)'>" . $row["Vendor"] . " " . $row["Name"] .  "</a></td>";
                     echo "<td>" . $row["Price"] . "</td>";
                     echo "</tr>";
 
-                }
+                }*/
 
                 ?> <!-- the php code that links the database to the page, fetches
                  the values on the database table and displays them on the website-->
