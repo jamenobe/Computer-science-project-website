@@ -84,3 +84,10 @@ th, td {
     max-height: 500px;
     position: absolute;
 }
+
+#gallery-div{
+
+    overflow-y: scroll;
+    max-height: 500px;
+    position: absolute;
+}

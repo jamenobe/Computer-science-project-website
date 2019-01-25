@@ -83,7 +83,7 @@
                                 echo "<td><a onclick='SetCPU(`" . $row["ID"] . "`)'>" . $row["Vendor"] . " " . $row["Name"] .  "</a></td>";
                                 echo "<td>" . $row["Price"] . "</td>";
                                 echo "</tr>";
-                            // This is where you output everything
+                            // This is where everything is outputted, and a cookie is created so that when the user selects an item it is saved
 
                         }
 
@@ -91,53 +91,44 @@
                 }
                 fetch_cpu_data();
 
-                // Mocking up the database
-                /*$result = [
-
-                        [
-
-                                "ID" => "1",
-                                "Vendor" => "Intel",
-                                "Price" => "£269",
-                                "Name" => "I5-8600k",
-                                "description" => "9MB cache, 3.6ghz",
-                                "Socket" => "LGA 1151",
-
-                        ],
-                        [
-
-                            "ID" => "2",
-                            "Vendor" => "Intel",
-                            "Price" => "£359",
-                            "Name" => "I7-8700k",
-                            "description" => "12MB cache, 3.7ghz",
-                            "Socket" => "LGA 1151",
-
-                        ]
-
-                ];*/
-
-                // Would use fetch_assoc() function if result from database
-                /*foreach ($result as $row) {
-
-                    echo "<tr>";
-                    echo "<td><a onclick='SetCPU(`" . $row["ID"] . "`)'>" . $row["Vendor"] . " " . $row["Name"] .  "</a></td>";
-                    echo "<td>" . $row["Price"] . "</td>";
-                    echo "</tr>";
-
-                }*/
-
                 ?> <!-- the php code that links the database to the page, fetches
                  the values on the database table and displays them on the website-->
 
             </table>
         </div>
 
-        <div class="col-sm-6" align="center">
+        <div id="gallery-div" class="col-sm-6" align="center">
 
+            <div class="image-gallery">
+                <img class="myslides" src="c:\users\jamie noble\phpstormprojects\computer-science-project-website\images\i5_8600k_pic.jpeg" style="width:100%">
+                <img class="myslides" src="" style="width:100%">
+                <img class="myslides" src="" style="width:100%">
+                <img class="myslides" src="" style="width:100%">
 
+                <button class="display-left" onclick="plusdivs(-1)">&#10094;</button>
+                <button class="display-right" onclick="plusdivs(1)">&#10095;</button>
+            </div>
 
-    </div>
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    if (n > x.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.length}
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex-1].style.display = "block";
+                }
+            </script>
+        </div>
 
 </div>
 
