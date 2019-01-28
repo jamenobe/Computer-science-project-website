@@ -99,7 +99,7 @@
         <div id="gallery-div" class="col-sm-6" align="right">
 
             <div class="image-gallery">
-                <img class="myslides" src="c:\users\jamie noble\phpstormprojects\computer-science-project-website\images\i5_8600k_pic.jpeg" style="width:100%">
+                <img class="myslides" src="images\i5_8600k_pic.jpeg" style="width:100%">
                 <img class="myslides" src="" style="width:100%">
                 <img class="myslides" src="" style="width:100%">
                 <img class="myslides" src="" style="width:100%">
@@ -130,7 +130,7 @@
         </div>
 
     </div>
-
+<br>
     <div class="row" align="center">
 
         <div id="next_button" class="col-sm-2" align="right">
