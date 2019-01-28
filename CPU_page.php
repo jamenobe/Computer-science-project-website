@@ -55,8 +55,7 @@
 
     <div class="row" align="center">
 
-
-       <div id="table_div" class="col-sm-5" align="center">
+       <div id="table_div" class="col-sm-5">
            <table>  <!-- creates the table for the name and value of the processors -->
                 <tr>
 
@@ -88,49 +87,73 @@
 
                     }
                 }
-                fetch_cpu_data();
+                //fetch_cpu_data();
 
                 ?>  <!-- the php code that links the database to the page, fetches
                  the values on the database table and displays them on the website -->
+                <tr>
+                    <td>A CPU</td>
+                    <td>Some money</td>
+                </tr>
+               <tr>
+                   <td>A CPU</td>
+                   <td>Some money</td>
+               </tr>
+               <tr>
+                   <td>A CPU</td>
+                   <td>Some money</td>
+               </tr>
+               <tr>
+                   <td>A CPU</td>
+                   <td>Some money</td>
+               </tr>
+               <tr>
+                   <td>A CPU</td>
+                   <td>Some money</td>
+               </tr>
+               <tr>
+                   <td>A CPU</td>
+                   <td>Some money</td>
+               </tr>
+               <tr>
+                   <td>A CPU</td>
+                   <td>Some money</td>
+               </tr>
 
-            </table>
+           </table>
+       </div>
+       <div id="gallery-div" class="col-sm-6">
+            <br/>
+           <div class="image-gallery">
+               <button class="display-left" onclick="plusdivs(-1)">&#10094;</button>
+               <img class="myslides" src="images\i5_8600k_pic.jpeg" style="width:75px; height: auto;">
+<!--               <img class="myslides" src="" style="width:75px; height: auto;">-->
+<!--               <img class="myslides" src="" style="width:75px; height: auto;">-->
+<!--               <img class="myslides" src="" style="width:75px; height: auto;">-->
+               <button class="display-right" onclick="plusdivs(1)">&#10095;</button>
+           </div>
+
+           <script>
+               var slideIndex = 1;
+               showDivs(slideIndex);
+               function plusDivs(n) {
+                   showDivs(slideIndex += n);
+               }
+
+               function showDivs(n) {
+                   var i;
+                   var x = document.getElementsByClassName("mySlides");
+                   if (n > x.length) {slideIndex = 1}
+                   if (n < 1) {slideIndex = x.length}
+                   for (i = 0; i < x.length; i++) {
+                       x[i].style.display = "none";
+                   }
+                   x[slideIndex-1].style.display = "block";
+               }
+           </script>
         </div>
-
-        <div id="gallery-div" class="col-sm-6" align="right">
-
-            <div class="image-gallery">
-                <img class="myslides" src="images\i5_8600k_pic.jpeg" style="width:100%">
-                <img class="myslides" src="" style="width:100%">
-                <img class="myslides" src="" style="width:100%">
-                <img class="myslides" src="" style="width:100%">
-
-                <button class="display-left" onclick="plusdivs(-1)">&#10094;</button>
-                <button class="display-right" onclick="plusdivs(1)">&#10095;</button>
-            </div>
-
-            <script>
-                var slideIndex = 1;
-                showDivs(slideIndex);
-
-                function plusDivs(n) {
-                    showDivs(slideIndex += n);
-                }
-
-                function showDivs(n) {
-                    var i;
-                    var x = document.getElementsByClassName("mySlides");
-                    if (n > x.length) {slideIndex = 1}
-                    if (n < 1) {slideIndex = x.length}
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none";
-                    }
-                    x[slideIndex-1].style.display = "block";
-                }
-            </script>
-        </div>
-
     </div>
-<br>
+    <br>
     <div class="row" align="center">
 
         <div id="next_button" class="col-sm-2" align="right">
