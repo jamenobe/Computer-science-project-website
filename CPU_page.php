@@ -53,12 +53,11 @@
 
     </div>
 
-    <div class="row">
+    <div class="row" align="center">
 
-        <div class="col-sm-1"></div>
 
-        <div id="table_div" class="col-sm-4" align="center">
-            <table> <!-- creates the table for the name and value of the processors -->
+       <div id="table_div" class="col-sm-5" align="center">
+           <table>  <!-- creates the table for the name and value of the processors -->
                 <tr>
 
                     <th>CPU name</th>
@@ -66,77 +65,81 @@
 
                 </tr>
                 <?php
-                /*function fetch_cpu_data()
+                function fetch_cpu_data()
                 {
-                    $conn = mysqli_connect("192.168.43.207", "root", "password", "project");
+                    $conn = mysqli_connect("192.168.0.24", "root", "password", "project");
                     if ($conn->connect_error) {
 
                         die("connection Failed:" . $conn->connect_error);
 
                     }
-                    $sql = "SELECT Name, Price from cpu_table";
+                    $sql = "SELECT * from cpu_table";
                     $result = $conn->query($sql);
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
 
-                            // This is where you output everything
+                                echo "<tr>";
+                                echo "<td><a onclick='SetCPU(`" . $row["ID"] . "`)'>" . $row["Vendor"] . " " . $row["Name"] .  "</a></td>";
+                                echo "<td>" . $row["Price"] . "</td>";
+                                echo "</tr>";
+                            // This is where everything is outputted, and a cookie is created so that when the user selects an item it is saved
 
                         }
 
                     }
                 }
-                fetch_cpu_data();*/
+                fetch_cpu_data();
 
-
-                // Mocking up the database
-                $result = [
-
-                        [
-
-                                "ID" => "1",
-                                "Vendor" => "Intel",
-                                "Price" => "£269",
-                                "Name" => "I5-8600k",
-                                "description" => "9MB cache, 3.6ghz",
-                                "Socket" => "LGA 1151",
-
-                        ],
-                        [
-
-                            "ID" => "2",
-                            "Vendor" => "Intel",
-                            "Price" => "£359",
-                            "Name" => "I7-8700k",
-                            "description" => "12MB cache, 3.7ghz",
-                            "Socket" => "LGA 1151",
-
-                        ]
-
-                ];
-
-                // Would use fetch_assoc() function if result from database
-                foreach ($result as $row) {
-
-                    echo "<tr>";
-                    echo "<td><a onclick='SetCPU(`" . $row["ID"] . "`)'>" . $row["Vendor"] . " " . $row["Name"] .  "</a></td>";
-                    echo "<td>" . $row["Price"] . "</td>";
-                    echo "</tr>";
-
-                }
-
-                ?> <!-- the php code that links the database to the page, fetches
-                 the values on the database table and displays them on the website-->
+                ?>  <!-- the php code that links the database to the page, fetches
+                 the values on the database table and displays them on the website -->
 
             </table>
         </div>
 
-        <div class="col-sm-6" align="center">
+        <div id="gallery-div" class="col-sm-6" align="right">
 
+            <div class="image-gallery">
+                <img class="myslides" src="images\i5_8600k_pic.jpeg" style="width:100%">
+                <img class="myslides" src="" style="width:100%">
+                <img class="myslides" src="" style="width:100%">
+                <img class="myslides" src="" style="width:100%">
 
+                <button class="display-left" onclick="plusdivs(-1)">&#10094;</button>
+                <button class="display-right" onclick="plusdivs(1)">&#10095;</button>
+            </div>
+
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
+
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    if (n > x.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.length}
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex-1].style.display = "block";
+                }
+            </script>
+        </div>
 
     </div>
+<br>
+    <div class="row" align="center">
 
-</div>
+        <div id="next_button" class="col-sm-2" align="right">
+
+            <a class="btn btn-primary" href="Motherboard_page.php" role="button">Next</a>
+
+        </div>
+
+    </div>
 
 <script language="JavaScript">
 
