@@ -68,7 +68,7 @@
                 <?php
                 function fetch_motherboard_data()
                 {
-                    $conn = mysqli_connect("192.168.43.207", "root", "password", "project");
+                    $conn = mysqli_connect("192.168.0.24", "root", "password", "project");
                     if ($conn->connect_error) {
 
                         die("connection Failed:" . $conn->connect_error);
@@ -90,11 +90,11 @@
             </table>
         </div>
 
-        <div class="col-sm-6" align-"center">
 
 
 
-    </div>
+
+
 
 </div>
 

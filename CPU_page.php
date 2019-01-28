@@ -53,12 +53,11 @@
 
     </div>
 
-    <div class="row">
+    <div class="row" align="center">
 
-        <div class="col-sm-1"></div>
 
-        <div id="table_div" class="col-sm-4" align="center">
-            <table> <!-- creates the table for the name and value of the processors -->
+       <div id="table_div" class="col-sm-5" align="center">
+           <table>  <!-- creates the table for the name and value of the processors -->
                 <tr>
 
                     <th>CPU name</th>
@@ -91,13 +90,13 @@
                 }
                 fetch_cpu_data();
 
-                ?> <!-- the php code that links the database to the page, fetches
-                 the values on the database table and displays them on the website-->
+                ?>  <!-- the php code that links the database to the page, fetches
+                 the values on the database table and displays them on the website -->
 
             </table>
         </div>
 
-        <div id="gallery-div" class="col-sm-6" align="center">
+        <div id="gallery-div" class="col-sm-6" align="right">
 
             <div class="image-gallery">
                 <img class="myslides" src="c:\users\jamie noble\phpstormprojects\computer-science-project-website\images\i5_8600k_pic.jpeg" style="width:100%">
@@ -130,7 +129,17 @@
             </script>
         </div>
 
-</div>
+    </div>
+
+    <div class="row" align="center">
+
+        <div id="next_button" class="col-sm-2" align="right">
+
+            <a class="btn btn-primary" href="Motherboard_page.php" role="button">Next</a>
+
+        </div>
+
+    </div>
 
 <script language="JavaScript">
 
